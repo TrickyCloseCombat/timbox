@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agregar Empleado</title>
+</head>
+<body>
+
+ <div>  
+	<h1><a href=""> Generar Empleado</a></h1>
+	<br>
+	<h2> Favor de llenar el formulario con sus datos correctamente.</h2>
+	<hr>
+ </div>
+ 	<div>
+ 	<form method="POST">{% csrf_token %}
+ 		{{form.as_p}}	
+ 		<button type="submit">Guardar!</button>
+ 	</form>  		
+  	</div>
+</body>
+</html>

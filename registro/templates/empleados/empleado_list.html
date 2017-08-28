@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Empleados</title>
+</head>
+<body>
+ <div>  
+	<h1><a href=""> Empleados</a></h1>
+	<hr>
+	<div><a href="{% url 'registro.views.home' %}"> Home </a><a>   </a><a href="{% url 'registro.views.empleado_new' %}"> Agregar Empleados </a>
+	</div>
+	<hr>
+ </div>
+	{% for empleado in empleados %}
+	  <div>
+	  	<h1> <a href=""><a>Nombre: </a> {{empleado.nombre}}</a> </h1>
+	  	<h3>  <a>RFC: {{empleado.rfc}} </a></h3>
+	  	<h3><a>Puesto: {{empleado.puesto}} </a> </h3>
+		<a href="{% url 'empleado_edit' pk=empleado.pk %}"> Editar </a>	
+	  </div>
+	  {% endfor %}
+ 
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Agregar sucursal</title>
+</head>
+<body>
+
+ <div>  
+	<h1><a href=""> Agregue una sucursal</a></h1>
+	<br>
+	<a href="{% url 'registro.views.home'%}"> Home </a>
+	<h2> Favor de llenar el formulario con sus datos correctamente.</h2>
+	<hr>
+ </div>
+ 	<div>
+ 	<form method="POST">{% csrf_token %}
+ 		{{form.as_p}}	
+ 		<button type="submit">Guardar!</button>
+ 	</form>  		
+  	</div>
+</body>
+</html>

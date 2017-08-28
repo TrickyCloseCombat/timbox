@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+
+ <div>  
+	<h1><a href=""> Bienvenido </a></h1>
+	<br>
+	<h2> Favor de seleccionar una opcion. </h2>
+	<p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+    
+	<hr>
+ </div>
+ 	<div>
+ 	 <a href ="{% url 'registro.views.empleado_list' %}"> Registrar empleado </a>
+	<br>
+	 <a href ="{% url 'registro.views.sucursal_list'%}"> Registrar sucursal </a>
+
+  	</div>
+</body>
+</html>
